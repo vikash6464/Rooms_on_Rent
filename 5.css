@@ -1,0 +1,140 @@
+@media only screen and (min-width: 980px)
+{.footer__secondary-wrapper {
+    padding: 32px;
+}
+.footer__secondary-wrapper {
+    background-color: #37454d;
+    padding: 25px;
+    margin-top: 0px;
+    height: auto;
+    
+}}
+.footer__copyright-text {
+    color: #9ba2a6;
+    display: inline-block;
+    font-size: 12px;
+    margin-top: 8px;
+    text-align: center;
+    width: 100%;
+    font-family: sans-serif;
+}
+h6 {
+    font-size: 25px;
+    margin-bottom: 3px;
+    text-align: center;
+    color: #ced4da;
+    /* margin-top: 0px; */
+}
+section.Network {
+    text-align: center;
+    width: 100%;
+    vertical-align: middle;
+    border-top: 1px solid #dcdcdc;
+}
+.verticalPadding {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+}
+.fullscreenWrapper {
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+}
+body div {
+    box-sizing: border-box;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+section.Network .sections {
+    width: 18%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.NetworkCard {
+    text-align: center;
+}
+.NetworkCard .heading {
+    font-size: 28px;
+    margin-top: 16px;
+}
+p {
+    padding: 0;
+    /* margin: 0 0 5px; */
+    margin: 0 0 .3125rem;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.NetworkCard .description {
+    font-size: 14px;
+    color: #989898;
+    margin-top: -25px;
+}
+#homePageTestimonials.nb-testimonials {
+    background-color: #334a5c;
+    padding: 60px 27%;
+}
+.nb-testimonials {
+    width: 100%;
+    background-color: #656565;
+    color: #fff;
+    position: relative;
+}
+ 
+#homePageTestimonials.nb-testimonials .title {
+    font-weight: 300;
+}
+.nb-testimonials .title {
+    text-align: center;
+    position: relative;
+    font-size: 30px;
+}
+
+.text-center {
+    text-align: center;
+}
+.wrapper {
+    max-width: 560px;
+    height: 320px;
+    margin: 60px auto;
+    padding: 0 20px;
+    background-size:cover;
+}
+.video {
+    width: 410px;
+    height: 310px;
+    background-color: #000;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    margin-left: 60px;
+
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    /* margin-right: 51px; */
+    margin-left: 25px;
+}
+#homePageTestimonials.nb-testimonials .nb-carousel {
+    width: 100%;
+}
+
+.carousel-inner img {
+    width: 15%;
+    height: 100%;
+}
+.carousel-control-prev {
+  left: -100px;
+}
+.carousel-control-next {
+  right: -80px;
+}
+.carousel-indicators .active {
+  opacity: 0;
+}

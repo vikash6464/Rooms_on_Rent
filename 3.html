@@ -1,0 +1,211 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta charset="UTF-8">
+        <title data-default="Rooms on Rent" data-title="">Register - Rooms on Rent</title>
+<style type="text/css">
+
+@media only screen and (min-width: 816px)
+{.centerwrapper--narrower {
+    max-width: 100%;
+}}
+
+section {
+    display: block;
+}
+
+@media only screen and (min-width: 816px)
+{.box {
+    margin: 20px 300px;
+}}
+
+@media only screen and (min-width: 412px)
+{.box {
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(41,51,57,0.5);
+}}
+div {
+    display: block;
+}
+html {
+    font-family: Arial,Helvetica,Sans,Sans-Serif,"Sans Serif";
+    font-size: 14px;
+    line-height: 1.25;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+html, button, input, select, textarea {
+    color: #37454d;
+}
+@media only screen and (min-width: 816px)
+{.box__header {
+    height: 74px;
+    padding: 35px 16px;
+}}
+@media only screen and (min-width: 412px)
+{.box__header {
+    border-bottom: none;
+}}
+.box__header {
+    display: flex;
+    justify-content: center;
+}
+@media only screen and (min-width: 816px)
+{.content-body {
+    max-width: 9999px;
+    /*padding: 0 32px;*/
+}}
+.content-body {
+    overflow: hidden;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+h1 {
+    display: block;
+    margin-inline-start: 0px;
+    margin-inline-end: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    padding-right: 10px;
+}
+label {
+    cursor: default;
+}
+.login .btn--icon-text-centered.btn--icon-leading {
+    height: 30px;
+    width: 100px;
+    cursor: pointer;
+}
+.btn.btn--w-100 {
+    width: 100%;
+}
+.login .btn--icon-text-centered {
+    text-align: center;
+}
+@media only screen and (min-width: 412px)
+{.login_footnote {
+   text-align: center;
+}}
+.box__header {
+  animation-name:fadeIn;
+  animation-duration: 4s;
+}
+@-webkit-keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+         }
+         
+         @keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+         }
+         
+         .fadeIn {
+            -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+         }
+
+
+</style>
+    </head>
+    <body>
+    <div id="unified-sign-in" class="centerwrapper centerwrapper--narrower with-transitions">
+        <section class="login">
+            <div class="box">
+                
+                <button onclick="goBack()"> &lt; </button>
+                <script>
+                        function goBack() {
+                         window.history.back();
+                                        }
+                </script>
+                <header class="box__header">
+                <a href="C:/Users/Vishal/Desktop/IP/3.html">
+                           <img id="headerLogo" src="C:/Users/Vishal/Desktop/IP/pic4c.png" alt="logo">
+                            </a>
+            </header>
+            <div class="content-body">
+                <h1 class="box__headline js_headLine">Create your account</h1>
+                <div id="check-email-slide" class="sign-in-slide">
+                    
+            <div class="mb-spacing-x-6" style="text-align: center;padding-bottom: 20px">
+                <label for="name" class="label" style="margin-left: 82px">Name</label>
+                 <input type="text" id="name" name="name"  class="input "  required="required" placeholder="Name" style="font-size: 18px; width: 390px;margin-bottom: 25px"><br>
+                 <label for="email" class="label">Email address</label>
+                 <input type="email" id="email" name="email" class="input "  required="required" placeholder="Email address" style="font-size: 18px; width: 390px;margin-bottom: 25px"><br>
+                <label for="password" class="label" style="margin-left: 40px">Password</label>
+                <input type="password" name="pass" id="password" class="input " required="required" placeholder="At least 6 characters" style="font-size: 18px;width: 390px;margin-bottom: 25px"><br>
+                <label for="password" class="label" style="margin-left: 40px">Mobile Number</label>
+                <input type="tel" name="Mobno" id="mno" class="input " required="required" style="font-size: 18px;width: 390px;margin-bottom: 25px" ><br>
+            </div>
+            <button class="btn btn btn--icon-leading btn--primary btn--regular btn--w-100 btn--icon-text-centered btn--signup" id="login_email_submit" name="bt" id="bt" onclick="func()">
+                <span class="btn__text">Register</span>
+            <div class="ellipsis-loader-btn"></div>
+            
+<!--<div class="ellipsis-loader ellipsis-loader--bright">
+    <div class="ellipsis-loader__dot"></div>
+    <div class="ellipsis-loader__dot"></div>
+    <div class="ellipsis-loader__dot"></div>
+</div>        
+</div+>
+<span class="loader-text">Please wait...</span>-->   
+<script>
+    function func()
+    {
+            
+              var name = document.getElementById("name").value;
+              var email = document.getElementById("email").value;
+              var password = document.getElementById("password").value;
+        //      localStorage.setItem("textvalue",username);
+               var ob= document.getElementById("mno").value;
+               var message;
+               var xhr = new XMLHttpRequest();
+               var url = "http://localhost:8081/";
+               xhr.open("POST", url, true);
+               xhr.setRequestHeader('Content-Type','application/json');
+               xhr.send(JSON.stringify({"email":email,"name":name,"password":password ,"Mobno":ob}));
+               xhr.onload = function () {
+                   if (this.status == 200) {
+                      alert("Successful Register !!");
+                      location.href = "5.html";
+                      //arr.push(this.responseText);
+                   }
+                   else {
+                    //localStorage.clear();
+                       alert("incorrect request");
+                   }
+              }
+          }
+    
+</script> 
+ </button>
+        
+    </div>
+</div>
+</div>
+<p class="login__footnote" style="text-align: center">
+    <small>Reminder: by signing up, you are agreeing to our 
+        
+        <a href="C:/Users/Vishal/Desktop/IP/2.html">Terms of Use</a>.
+    </small>
+</p>
+</section>
+</div>
+<footer class="login__footer content-body login__footer-btn js-login-footer-btn">
+        <h2 class="headline-below-box" style="font-size: 18px;">Already have an account?</h2>
+        <a href="C:/Users/Vishal/Desktop/IP/1.html">
+        <button class="btn btn--tertiary btn--regular btn--w-auto-screen-medium btn--social-login js-social-login" style="width: 150px;height: 30px;cursor: pointer" >Login In
+        </button>            
+    </footer>
+</body>
+</html>

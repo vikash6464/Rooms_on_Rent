@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		container {
+    max-width: 100%;
+}
+/*@media (min-width: 1200px)
+.container {
+    width: 1170px;
+}
+@media (min-width: 992px)
+.container {
+    width: 970px;
+}
+@media (min-width: 768px)
+.container {
+    width: 750px;
+}*/
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+.h1Title {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 2px 0;
+    line-height: 21px;
+}
+.h1Title {
+    padding-top: 5px;
+}
+.ellipsisText {
+    overflow: hidden;
+}
+.ellipsisText, .lastSearch, .lastSearch .lastSearchLocDetails, .navbar-item #userProfileDD {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.main-content {
+    padding: 0;
+}
+div {
+    display: block;
+}
+body {
+    color: #464646;
+}
+.breadcrumb_card {
+    background: #fff;
+    padding: 16px;
+    margin: 7px 0;
+}
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.margin_top_4 {
+    margin-top: 4px;
+}
+.breadcrumb {
+    padding: 8px  15px;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+.breadcrumb {
+   
+    list-style: none;
+   
+    border-radius: 4px;
+}
+ul {
+    display: block;
+    
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+ul, ol {
+    margin-top: 0;   
+}
+breadcrumb>li {
+    display: inline-block;
+}
+a, a:hover {
+    color: #909496;
+    text-decoration: none;
+}
+a:-webkit-any-link {
+    cursor: pointer;
+}
+body {
+    width: 100%;
+    overflow-x: hidden;
+    background: #e9e9e9;
+    color:#464646;
+    font-size: 14px;
+    font-family: 'Source Sans Pro',sans-serif,Calibri,helvetica,Cantarell,arial,tahoma,verdana;
+}
+.h1Title {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 2px 0;
+    line-height: 21px;
+}
+.h1Title {
+    padding-top: 5px;
+}
+.ellipsisText {
+    overflow: hidden;
+}
+.ellipsisText, .lastSearch, .lastSearch .lastSearchLocDetails, .navbar-item #userProfileDD {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.card{
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+	position: relative;
+    box-sizing: border-box;
+    border-radius: 2px;
+    background-clip: padding-box;
+	overflow: hidden;
+	margin: .5rem 0 1rem;
+    background-color: #fff;
+}
+.card .card-title {
+    font-weight: 300;
+    padding: 0;
+}
+.card-header-title {
+    background-color: #f8f8f8;
+    margin: 0;
+    min-height: 66px;
+    max-height: 66px;
+    padding: 15px;
+    border-top: 1px solid #D1D1D1;
+    border-bottom: 1px solid #D1D1D1;
+}
+#listResults .card a {
+    color: #959595!important;
+}
+.card-header-title .card-link-detail {
+    
+    font-family: inherit;
+    display: block;
+   
+}
+.card-header-title h2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+h2,h5 {
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+   
+}
+a [class*=" icon-"] {
+    display: inline;
+}
+[class*=" icon-"] {
+    width: auto;
+    height: auto;
+    line-height: normal;
+    vertical-align: baseline;
+    background-image: none;
+    background-position: 0% 0%;
+    background-repeat: repeat;
+    margin-top: 0;
+}
+[class*=" icon-"] {
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+}
+.card-header-title h5 {
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 5px;
+}
+#listResults .noOfViews {
+    background-color: #fff;
+    background-image: url(/static/img/resale/bolt@2x.png);
+    background-repeat: no-repeat;
+    background-position: 15px;
+    background-size: 20px;
+    max-width: 200px;
+    font-size: 12px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    padding: 7px 10px 7px 45px;
+    border: 1px solid #E1E1E1;
+    border-radius: 35px 0 0 35px;
+    box-shadow: 0 0 1px #E1E1E1;
+}
+.card .overview {
+    max-height: 60px;
+    border-bottom: 1px solid #D1D1D1;
+    padding: 10px;
+    text-align: center;
+}
+card .overview h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+.card .overview h5 {
+    font-size: 12px;
+    font-weight: 400;
+    margin: 5px 0 0;
+}
+.col-sm-4,.col-sm-5{min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.card .details {
+    padding-top: 10px;
+    height: 360px;
+}
+@media (min-width: 768px){
+.col-sm-7 {
+    width: 100%;
+}}
+.col-sm-20,.col-sm-12{
+	position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.card .detail-summary {
+    border-style: double;
+    border-color: grey;
+    margin-right: 10px;
+}
+@media (min-width: 768px){
+.col-sm-12 {
+    width: 100%;
+    float: left;
+}}
+@media (min-width: 768px){
+.col-sm-20 {
+    float: left;
+    width: 57.666667%;
+    text-align: center;
+}}
+.card .detail-summary .border-bottom, .card-header-title {
+    border-bottom: 1px solid #D1D1D1;
+}
+.card .detail-summary .summary-row, .card .overview {
+    min-height: 60px;
+}
+.card .detail-summary .summary-row .solid-border-right {
+    border-right: 1px solid #D1D1D1;
+    min-height: 90px;
+    max-height: 60px;
+}
+
+h2:hover {
+  color: red;
+}
+.no-pad {
+    padding: 0;
+}
+@media (min-width: 768px){.col-md-7 {
+    width: 65.333333333333336%;
+}}
+.col-md-7{
+    float: left;
+position: relative;
+min-height: 1px;
+}
+.card .action-bar {
+    padding-top: 10px;
+    padding-left: 0;
+    border: none;
+}
+.card .card-action {
+	padding:20px;
+}
+.btn-primary,.btn-primary1 {
+    background-color: #fd3753;
+    color: #FFF;
+    border: 1px solid #fd3753;
+    align-items: center;
+    margin-left:190px;
+    height: 50px;
+
+}
+
+
+
+
+
+
+	</style>
+</head>
+<body class="body" style="margin: 0px;">
+	<div class="header" id="header" style="border-bottom: 1px solid #D1D1D1">
+		<div class="header-logo">
+						<a href="C:/Users/saeesh/Desktop/IP/5.html">
+							<img id="headerLogo" src="pic4c.png" alt="logo">
+							</a>
+                        </div>
+                    </div>
+    <div class="container listing-page" id="container">
+    	<div class="row">
+    		
+    			<div class="col-sm-7 main-content default resale-main" id="main-content">
+    				
+					<div id="listResults">
+						<div class="breadcrumb_card" style="display: block;">
+    <div class="row" style="margin-top: -5px">
+        <div class="col-sm-7 col-md-8 margin_top_4">
+            <!-- Breadcrumb using Schema-->
+            
+
+<ul class="breadcrumb" itemscope="" itemtype="https://schema.org/BreadcrumbList" id="pageBreadCrumb">
+    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem" class="inactiveBread">
+        <a itemtype="https://schema.org/Thing" itemprop="item" href="">
+        <span itemprop="name" class="breadcrumbItem"> Home</span></a>
+        <meta itemprop="position" content="1">
+    </li>
+                
+            <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem" class="activeBreadCrumb" id="breadcrumb_locality">
+                   
+                    <span propitem="name" class="breadcrumbItem breadCrumbLocalityName" id="breadcrumb_city">Ghatkopar
+                    </span>
+                    <meta propitem="position" content="3">
+            </li>           
+</ul> 
+<h8 style="font-size: 15px"> Paying Guest - PG in Ghatkopar | Hostels in Ghatkopar</h8>       
+</div>
+
+</div>
+<div class="card" id="prop-ff808181629acf750162a46755703b06" itemscope="" itemtype="http://schema.org/Hostel">
+            <div class="card-title">
+                <div class="card-header-title ">
+                            <a class="card-link-detail" href="try.html" target="_blank"  title="PG for Girls in Ghatkopar West" itemprop="url" style="text-transform: capitalize; margin: 0px">
+                                <h2>
+                                                PG for students in Ghatkopar
+                                                        
+                                    <i class="icon icon-external-link"></i>
+                                </h2>
+                            </a>
+                            <h5>
+                                    Lbs Rd, Amrut Nagar  Near  R City Mall,Kalpataru AURA.
+                                </h5>
+                                <div class="noOfViews">4 people are viewing this property right now</div>
+                            </div>
+                        </div>
+                        <div class="card-content" itemprop="additionalProperty" itemscope="" itemtype="http://schema.org/PropertyValue" style="height: 80px;border-bottom: 1px solid #D1D1D1;">
+              
+                    <div class="col-sm-4 solid-border-right" style="border-right:1px solid #EBEBEB;" itemprop="valueReference" itemscope="" itemtype="http://schema.org/PropertyValue">
+                        <h3>
+                            <meta itemprop="name" content="Minimum Rent per Month">
+                            <i class="icon-inr icon-x icon " title="Rs"></i> <span itemprop="value">460 sqft</span>
+                             
+                        </h3>
+                        <h5>
+                            Builtup
+                        </h5>
+                    </div>
+                    <div class="col-sm-4 solid-border-right" style="border-right:1px solid #EBEBEB;">
+                        <h3>
+                            <meta itemprop="name" content="Room Type Available">
+                                <span itemprop="value">₹25,000</span>
+                        </h3>
+                        <h5>
+                           Deposite
+                        </h5>
+                    </div>
+                    <div class="col-sm-4" itemprop="valueReference" itemscope="" itemtype="http://schema.org/PropertyValue">
+                        <h3>
+                            <meta itemprop="name" content="Minimum Deposit">
+                            <i class="icon-inr icon-x icon " title="Rs"></i><span itemprop="value">₹20,000</span>
+                             
+                        </h3>
+                        <h5>
+                            Rent(Non-negotiable)
+                        </h5>
+                    
+                </div>
+            </diV>
+                 <div class="details">
+                 	<div class="col-sm-5">
+
+                 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+       
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="img1.jpeg" alt="img1.jpeg" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="img2.jpg" alt="img2.jpg" style="width:100%;">
+      </div>
+    
+
+      <div class="item">
+        <img src="img4.jpg" alt="img4.jpg" style="width:100%;">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+
+  </div>
+  
+</div>
+     <div class="col-sm-20">
+                        <div class="row detail-summary open_detail_page" data-id="ff80818162047ad4016205076180246f" >
+                            <div class="col-sm-12">
+                                <div class="row  summary-row border-bottom text-align-left">
+                                    <div class="property-tenants padding-right-0 col-sm-6 col-xs-6 solid-border-right solid-border-right-tab text-align-left">
+                                                    <h5 class="margin-bottom-0" style="font-size: 20px">Any</h5>
+                                                <h6 class="margin-top-5" style="font-size: 15px"> Preferred Tenants </h6>
+                                     </div>                                 
+                                    <div class="pg-posted-on col-sm-6 col-xs-6 text-align-left">
+                                            <h5 class="detail-title-overview margin-bottom-0"  style="font-size: 20px">4 days ago</h5>
+                                            <h6 class="margin-top-5" style="font-size: 15px">Posted On</h6>
+                                    </div>
+                                </div>
+                                <div class="row summary-row text-align-left">
+                                    <div class="property-mess col-sm-6 col-xs-6 solid-border-right solid-border-right text-align-left">
+                                            <h5 class="semi-bold margin-bottom-0" style="font-size: 20px">
+
+                                    Sharing
+                                             </h5>
+                                             <h6 class="margin-top-5" style="font-size: 15px">Room Type Available</h6>
+                                    </div>
+                                    <div class="pg-closing-time col-sm-6 col-xs-6 ">
+                                             <h5 class="semi-bold margin-bottom-0" style="font-size: 20px">
+                                                Not Provided
+                                             </h5>  
+                                             <h6 class="margin-top-5" style="font-size: 15px">Gate Closing Time</h6>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div> 
+<div class="row card-action action-bar"  id="row card-action action-bar">
+<div class="col-sm-5 col-md-7 no-pad">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Get Owner Details</button>
+
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Owner's Details </h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          Name:Tanmay Joshi<br><br>
+	  Contact No:-8879776448<br><br>
+	  NOTE:-Please contact the respective owner for further details<br><br>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+
+
+								 
+								 </div>              
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<div class="container listing-page" id="container">
+    	<div class="row">
+    		
+    			<div class="col-sm-7 main-content default resale-main" id="main-content">
+    				
+					<div id="listResults">
+						<div class="breadcrumb_card" style="display: block;">
+    
+<div class="card" id="prop-ff808181629acf750162a46755703b06" itemscope="" itemtype="http://schema.org/Hostel">
+            <div class="card-title">
+                <div class="card-header-title ">
+                            <a class="card-link-detail" href="try.html" target="_blank"  title="PG for Girls in Ghatkopar West" itemprop="url" style="text-transform: capitalize; margin: 0px">
+                                <h2>
+                                                PG for students in Ghatkopar
+                                                        
+                                    <i class="icon icon-external-link"></i>
+                                </h2>
+                            </a>
+                            <h5>
+                                    Shantiniketan Society near shreyas cinema,L.B.S.Marg,Ghatkopar(west).
+                                </h5>
+                                <div class="noOfViews">2 people are viewing this property right now</div>
+                            </div>
+                        </div>
+                        <div class="card-content" itemprop="additionalProperty" itemscope="" itemtype="http://schema.org/PropertyValue" style="height: 80px;border-bottom: 1px solid #D1D1D1;">
+              
+                    <div class="col-sm-4 solid-border-right" style="border-right:1px solid #EBEBEB;" itemprop="valueReference" itemscope="" itemtype="http://schema.org/PropertyValue">
+                        <h3>
+                            <meta itemprop="name" content="Minimum Rent per Month">
+                            <i class="icon-inr icon-x icon " title="Rs"></i> <span itemprop="value">500 sqft</span>
+                             
+                        </h3>
+                        <h5>
+                            Builtup
+                        </h5>
+                    </div>
+                    <div class="col-sm-4 solid-border-right" style="border-right:1px solid #EBEBEB;">
+                        <h3>
+                            <meta itemprop="name" content="Room Type Available">
+                                <span itemprop="value">₹50,000</span>
+                        </h3>
+                        <h5>
+                            Deposite
+                        </h5>
+                    </div>
+                    <div class="col-sm-4" itemprop="valueReference" itemscope="" itemtype="http://schema.org/PropertyValue">
+                        <h3>
+                            <meta itemprop="name" content="Minimum Deposit">
+                            <i class="icon-inr icon-x icon " title="Rs"></i><span itemprop="value">₹26,000</span>
+                             
+                        </h3>
+                        <h5>
+                            Rent(Negotiable)
+                        </h5>
+                    
+                </div>
+            </diV>
+                 <div class="details">
+                 	<div class="col-sm-5">
+
+                 		<div id="myCarousel-two" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+	<li data-target="#myCarousel" data-slide-to="3"></li>
+       
+       
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="ghat1.jpg" alt="ghat1.jpg" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="ghat2.jpg" alt="ghat2.jpg" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="ghat3.jpg" alt="ghat3.jpg" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="ghat4.jpg" alt="ghat4.jpg" style="width:100%;">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel-two" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel-two" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+
+  </div>
+  
+</div>
+     <div class="col-sm-20">
+                        <div class="row detail-summary open_detail_page" data-id="ff80818162047ad4016205076180246f" >
+                            <div class="col-sm-12">
+                                <div class="row  summary-row border-bottom text-align-left">
+                                    <div class="property-tenants padding-right-0 col-sm-6 col-xs-6 solid-border-right solid-border-right-tab text-align-left">
+                                                    <h5 class="margin-bottom-0" style="font-size: 20px">Any</h5>
+                                                <h6 class="margin-top-5" style="font-size: 15px"> Preferred Tenants </h6>
+                                     </div>                                 
+                                    <div class="pg-posted-on col-sm-6 col-xs-6 text-align-left">
+                                            <h5 class="detail-title-overview margin-bottom-0"  style="font-size: 20px">9 days ago</h5>
+                                            <h6 class="margin-top-5" style="font-size: 15px">Posted On</h6>
+                                    </div>
+                                </div>
+                                <div class="row summary-row text-align-left">
+                                    <div class="property-mess col-sm-6 col-xs-6 solid-border-right solid-border-right text-align-left">
+                                            <h5 class="semi-bold margin-bottom-0" style="font-size: 20px">
+
+                                    Sharing
+                                             </h5>
+                                             <h6 class="margin-top-5" style="font-size: 15px">Room Type Available</h6>
+                                    </div>
+                                    <div class="pg-closing-time col-sm-6 col-xs-6 ">
+                                             <h5 class="semi-bold margin-bottom-0" style="font-size: 20px">
+                                                Compulsary
+                                             </h5>  
+                                             <h6 class="margin-top-5" style="font-size: 15px"> Paper work</h6>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>   
+<div class="row card-action action-bar"  id="row card-action action-bar">
+<div class="col-sm-5 col-md-7 no-pad">
+
+<button type="button" class="btn btn-primary1" data-toggle="modal" data-target="#myModal1">Get Owner Details</button>
+
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal1">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Owner's Details </h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body1">
+          Name:Saeesh Kadge<br><br>
+	  Contact No:-9820486024<br><br>
+	  NOTE:-Please contact the respective owner for further details<br><br>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+								 </div>
+            
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+
+
+
+</body>
